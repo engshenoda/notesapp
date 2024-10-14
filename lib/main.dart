@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notesapp/views/notesview.dart';
+import 'package:notesapp/views/notes_view.dart';
 
 void main() {
   runApp(const NotesApp());
