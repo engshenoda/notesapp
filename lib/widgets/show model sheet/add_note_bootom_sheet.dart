@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notesapp/constans/colors.dart';
 import 'package:notesapp/widgets/show%20model%20sheet/custom_bottom.dart';
 import 'package:notesapp/widgets/show%20model%20sheet/custom_text_form_feild.dart';
 
@@ -8,25 +9,31 @@ class AddNoteBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
-        children: [
-          CustomTextFormFeild(
-            hintText: 'Title',
-            obscureText: false,
-          ),
-          CustomTextFormFeild(
-            hintText: 'Content',
-            obscureText: false,
-          ),
-          Spacer(),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: CustomBottom(
-              color: const Color.fromARGB(255, 5, 219, 235),
-              text: 'Add',
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column(
+          children: [
+            SizedBox(height: 32),
+            CustomTextFormFeild(
+              hintText: 'Title',
             ),
-          ),
-        ],
+            SizedBox(
+              height: 15,
+            ),
+            CustomTextFormFeild(
+              hintText: 'Content',
+              maxLines: 4,
+            ),
+            Spacer(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CustomBottom(
+                color: kprimarycolor,
+                text: 'Add',
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

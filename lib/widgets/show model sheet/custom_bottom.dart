@@ -21,7 +21,7 @@ class CustomBottom extends StatelessWidget {
           child: Text(
             text,
             style: const TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
