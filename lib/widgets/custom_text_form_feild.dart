@@ -19,45 +19,43 @@ class CustomTextFormFeild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Expanded(
-            child: TextField(
-              maxLines: maxLines,
-              cursorColor: kprimarycolor,
-              controller: controller,
-              onChanged: onChanged,
-              style: const TextStyle(fontSize: 20, color: Colors.grey),
-              decoration: InputDecoration(
-                hintText: hintText,
-                hintStyle: const TextStyle(
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Expanded(
+          child: TextField(
+            maxLines: maxLines,
+            cursorColor: kprimarycolor,
+            controller: controller,
+            onChanged: onChanged,
+            style: const TextStyle(fontSize: 20, color: Colors.grey),
+            decoration: InputDecoration(
+              hintText: hintText,
+              hintStyle: const TextStyle(
+                color: kprimarycolor,
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: const BorderSide(
+                  color: Colors.white,
+                ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: const BorderSide(
                   color: kprimarycolor,
                 ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: const BorderSide(
-                    color: Colors.white,
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: const BorderSide(
-                    color: kprimarycolor,
-                  ),
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: const BorderSide(
-                    color: Colors.white,
-                  ),
+              ),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: const BorderSide(
+                  color: Colors.white,
                 ),
               ),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
