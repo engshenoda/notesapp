@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notesapp/constans/colors.dart';
-import 'package:notesapp/widgets/show%20model%20sheet/custom_bottom.dart';
-import 'package:notesapp/widgets/show%20model%20sheet/custom_text_form_feild.dart';
+import 'package:notesapp/widgets/custom_bottom.dart';
+import 'package:notesapp/widgets/custom_text_form_feild.dart';
 
 class AddNoteBottomSheet extends StatelessWidget {
   const AddNoteBottomSheet({super.key});
