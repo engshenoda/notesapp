@@ -8,7 +8,7 @@ class CustomTextFormFeild extends StatelessWidget {
     this.onPressed,
     this.onChanged,
     this.controller,
-    this.maxLines = 1,
+    this.maxLines = 1, this.onSaved,
   });
 
   final String hintText;
@@ -16,6 +16,7 @@ class CustomTextFormFeild extends StatelessWidget {
   final int maxLines;
   final void Function()? onPressed;
   final Function(String)? onChanged;
+  final Function(String?)? onSaved;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,15 @@ class CustomTextFormFeild extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Expanded(
-          child: TextField(
+          child: TextFormField(
+            onSaved: onSaved,
+            validator: (value) {
+              if(value?.isEmpty ?? true){
+                return 'Field is required';
+              } else {
+                return null;
+              }
+            },
             maxLines: maxLines,
             cursorColor: kprimarycolor,
             controller: controller,
