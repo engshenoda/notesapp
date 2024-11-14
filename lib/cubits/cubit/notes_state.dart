@@ -13,8 +13,8 @@ class NotesSuccess extends NotesState {
   NotesSuccess(this.notes);
 }
 
-class Notesfailure extends NotesState {
+class NotesFailure extends NotesState {
   final String errMassage;
 
-  Notesfailure(this.errMassage);
+  NotesFailure(this.errMassage);
 }
