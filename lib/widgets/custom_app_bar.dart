@@ -24,7 +24,7 @@ class CustomAppBar extends StatelessWidget {
             icon,
             size: 40,
           ),
-        )
+        ),
       ],
     );
   }
