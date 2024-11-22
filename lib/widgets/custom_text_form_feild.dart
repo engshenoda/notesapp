@@ -15,7 +15,7 @@ class CustomTextFormFeild extends StatelessWidget {
   final TextEditingController? controller;
   final int maxLines;
   final void Function()? onPressed;
-  final Function(String)? onChanged;
+  final void Function(String)? onChanged;
   final void Function(String?)? onSaved;
 
   @override

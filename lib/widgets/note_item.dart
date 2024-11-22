@@ -11,12 +11,12 @@ class NoteItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context,MaterialPageRoute(builder: (context){
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
           return EditNoteView(notes: note);
         }));
       },
       child: Container(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           color: Color(note.color),
           borderRadius: BorderRadius.circular(10),
@@ -28,7 +28,7 @@ class NoteItem extends StatelessWidget {
               contentPadding: const EdgeInsets.all(0),
               title: Text(
                 note.title,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.black,
                   fontSize: 26,
                 ),
@@ -55,14 +55,28 @@ class NoteItem extends StatelessWidget {
                 },
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                note.date,
-                style: TextStyle(
-                  color: Colors.black.withOpacity(.4),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    note.date,
+                    style: TextStyle(
+                      color: Colors.black.withOpacity(.4),
+                    ),
+                  ),
                 ),
-              ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    note.date,
+                    style: TextStyle(
+                      color: Colors.black.withOpacity(.4),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
